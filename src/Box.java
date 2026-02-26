@@ -4,12 +4,14 @@ public class Box {
     private double height;
 
     public Box(double length, double width, double height) {
-        // implement me as described in part (a)
+        this.length = length;
+        this.width = width;
+        this.height = height;
     }
 
     // creates a cube: a box with all dimensions equal to side
     public Box(double side) {
-        // implement me as described in part (b)
+        this(side, side, side);
     }
 
     public double getLength() {
@@ -25,7 +27,7 @@ public class Box {
     }
 
     public double volume() {
-        // implement me as described in part (c)
+        return
     }
 
     public Box greaterVolume(Box otherBox) {
