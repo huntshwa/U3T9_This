@@ -27,19 +27,26 @@ public class Box {
     }
 
     public double volume() {
-        return
+        return length * width * height;
     }
 
     public Box greaterVolume(Box otherBox) {
-        // implement me as described in part (d)
+        if (this.volume() > otherBox.volume()) return this;
+        else if (this.volume() < otherBox.volume()) return otherBox;
+        else return null;
     }
 
     public String boxInfo() {
-        // implement me as described in part (e)
+        return InfoString.boxInfoString(this);
     }
 
     public void addToShape(Shape s) {
-        // implement me as described in part (f)
+        s.attachBox(this);
+    }
+
+    @Override
+    public String toString() {
+        return this.boxInfo();
     }
 
 }
